@@ -1,0 +1,103 @@
+:root {
+  --c-blue-1: hsl(216, 99%, 40%);
+  --c-blue-2: hsl(218, 78%, 55%);
+  --c-light: #fff;
+
+  --fs-small: 0.75rem;
+  --fs-medium: 1rem;
+  --fs-large: 1.5rem;
+  --fs-xlarge: 3rem;
+
+  --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--fs-medium);
+  line-height: 1.5;
+  color: var(--c-light);
+  background: var(--c-blue-2);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+/* navbar */
+.navbar {
+  background-color: var(--c-blue-2);
+  padding: 1rem 0;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: var(--fs-large);
+}
+
+.nav-list {
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-list .nav-links {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* header */
+.header {
+  padding: 6.25rem 0;
+}
+
+.header .flex {
+  align-items: center;
+  gap: 2rem;
+}
+
+/* boxes */
+.boxes {
+  padding: 3rem 0;
+}
+
+.boxes .flex {
+  gap: 2rem;
+}
+
+.box {
+  flex: 1;
+  background-color: #fff;
+  color: var(--c-blue-2);
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+
+  .header .flex,
+  .boxes .flex {
+    flex-direction: column;
+  }
+}
